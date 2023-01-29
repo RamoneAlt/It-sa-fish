@@ -12,7 +12,7 @@
 { word: 'Spottail Pinfish', hint: 'Saltwater!' }, { word: 'Porgy', hint: 'Saltwater!' },{ word: 'Triggerfish', hint: 'Saltwater!' },
 { word: 'Black Musselcracker', hint: 'Saltwater!' }, { word: 'Yellowfin Bream', hint: 'Saltwater!' }, { word: 'Cod', hint: 'Saltwater!' }, 
 { word: 'Walleye', hint: 'Freshwater!' }, { word: 'Goldfish', hint: 'Freshwater!' }, { word: 'Guppy', hint: 'Freshwater!' }, 
-{ word: 'Bettafish', hint: 'Freshwater!' }, { word: 'Cory Catfish', hint: 'Freshwater!' }, { word: 'Killifish', hint: 'Freshwater!' }, 
+{ word: 'Betta Fish', hint: 'Freshwater!' }, { word: 'Cory Catfish', hint: 'Freshwater!' }, { word: 'Killifish', hint: 'Freshwater!' }, 
 { word: 'Neon Tetra', hint: 'Freshwater!' }, { word: 'Cherry Barb', hint: 'Freshwater!' }, { word: 'Oscar', hint: 'Freshwater!' }, 
 { word: 'Bristlenost Pleco', hint: 'Freshwater!' }, { word: 'Zebra Danio', hint: 'Freshwater!' }, { word: 'Platy', hint: 'Freshwater!' }, 
 { word: 'Molly', hint: 'Freshwater!' }, { word: 'Discus', hint: 'Freshwater!' }, { word: 'Butterflyfish', hint: 'Saltwater!' }
