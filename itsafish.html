@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 
  <head> 
 <link href='https://fonts.googleapis.com/css?family=Dangrek' rel='stylesheet'>
@@ -8,22 +8,25 @@
 <style>
 
 #game {
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
   text-align: center;
 }
 #scrambled-word {
-  font-size: 50px;
+  animation: expand-contracth3 6s ease-in-out infinite;
+  font-size: 47px;
   margin-bottom: 3px;
   letter-spacing: 1px;
 }
 #result {
   margin-top: 10px;
   font-size: 24px;
+  animation: expand-contracthbox 6s ease-in-out infinite;
 }
 
   #guess-input {
         padding: 10px;
+        animation: expand-contracthbox 12.2s ease-in-out infinite;
         border-color: #10153d;
         border-radius: 7px;
         border: solid 3.5px;
@@ -52,24 +55,46 @@ h1 {
 
 @keyframes expand-contract {
   0% {
-  
-    letter-spacing: 15px;
+    letter-spacing: 13px;
   }
   50% {
-  
     letter-spacing: 21px;
   }
   100% {
-   
-    letter-spacing: 15px;
+    letter-spacing: 13px;
   }
 }
-   
-   
-   
-   
-   
 
+@keyframes expand-contracth3 {
+  0% {
+    letter-spacing: 2px;
+  }
+  50% {
+    letter-spacing: 4px;
+  }
+  100% {
+    letter-spacing: 2px;
+  }
+}
+
+
+@keyframes expand-contracthbox {
+  0% {
+    letter-spacing: 1px;
+    color: #0d0438;
+  }
+  50% {
+    letter-spacing: 4px;
+    color: #09051f;
+  }
+  100% {
+    letter-spacing: 1px;
+    color: #0d0438;
+  }
+}
+
+
+  
  .bubble {
         animation: bubble-animation 10s ease-in-out infinite;
         position: absolute;
@@ -86,13 +111,17 @@ h1 {
             transform: translateY(0);
              width: 27px;
              height: 27px;
-          
+             opacity: 0.9;
+             box-shadow: lightblue 0.75px 0.75px;
+
         }
         
          to {
             transform: translateY(-100vh);
-             width: 52px;
-             height: 52px;
+             width: 56px;
+             height: 56px;
+             opacity: 0.5;
+             box-shadow: lightblue 0px 0px;
            
         }
         
@@ -124,8 +153,8 @@ h1 {
   }
 
   100% {
-    width: 21px;
-    height: 21px;
+    width: 14px;
+    height: 14px;
     opacity: 0;
     transform: translateY(-100vh);
     transform: translate(-10px, -400px);
@@ -133,28 +162,33 @@ h1 {
   }
 }
 
-
-
 body {
         background: #6ea5c2; 
         font-family: 'Dangrek';
         align-content: center;
         text-align: center;
-       
 }
+
+h3 {
+  
+  letter-spacing: 2px;
+  animation: expand-contracth3 10.2s ease-in-out infinite;
+  text-shadow: #5e6491 3px 2px 6px;
+  
+  
+  
+}
+
+
 </style>
-
-
-
-
  </head>
 
 <body>
 
-
 <div id="game">
 
     <h1>IT'S A FISH!</h1>
+    <hr><br><br>
  
     <div id="scrambled-word"></div>
         <form>
@@ -209,7 +243,7 @@ function generateBubbles() {
 }
 
 // Call the generateBubbles function every 2000ms (2s)
-setInterval(generateBubbles, 60);
+setInterval(generateBubbles, 80);
 
 var form = document.querySelector("form");
 form.addEventListener("submit", function(event) {
@@ -229,7 +263,6 @@ function pop(bubble) {
 }
 </script>
 
-
 <script>
 var words = [
     { word: 'Tuna', hint: 'Saltwater!' }, { word: 'Swordfish', hint: 'Saltwater!' }, { word: 'Angelfish', hint: 'Freshwater!' }, 
@@ -238,10 +271,7 @@ var words = [
     { word: 'Bream', hint: 'Freshwater!' }, { word: 'Opah', hint: 'Freshwater!' }, { word: 'Mahi-mahi', hint: 'Saltwater!' },
     { word: 'Sardine', hint: 'Saltwater!' }, { word: 'Moonfish', hint: 'Freshwater!' }, { word: 'Yellow Tang', hint: 'Saltwater!' },
     { word: 'Tilapia', hint: 'Freshwater!' }, { word: 'Flounder', hint: 'Saltwater!' }, { word: 'Anchovy', hint: 'Freshwater!' },
-    { word: 'Trout', hint: 'Freshwater!' }, { word: 'Clownfish', hint: 'Saltwater!' }, { word: 'Bass', hint: 'Freshwater and Saltwater!' },
-    { word: 'Red Porgy', hint: 'Saltwater!' }, { word: 'Barracuda', hint: 'Saltwater!' }, { word: 'Crimson Sea Bream', hint: 'Saltwater!' },
- 		{ word: 'Fourfinger Threadfin', hint: 'Saltwater!' }, { word: 'Common Dentex', hint: 'Saltwater!' }, { word: 'Macropinna', hint: 'Saltwater!' }, { word: 'Sargo', hint: 'Saltwater!' }, { word: 'Sand Steenbras', hint: 'Saltwater!' }, { word: 'Annular Sea Bream', hint: 'Saltwater!' }, { word: 'Common Pandora', hint: 'Saltwater!' }, { word: 'Scup', hint: 'Saltwater!' }, { word: 'Boops Boops', hint: 'Saltwater!' }, { word: 'Viperfish', hint: 'Saltwater!' }, { word: 'Spottail Pinfish', hint: 'Saltwater!' }, { word: 'Porgy', hint: 'Saltwater!' },{ word: 'Triggerfish', hint: 'Saltwater!' }, { word: 'Black Musselcracker', hint: 'Saltwater!' }, { word: 'Yellowfin Bream', hint: 'Saltwater!' },
-   { word: 'Cod', hint: 'Saltwater!' }, { word: 'Walleye', hint: 'Freshwater!' }, { word: 'Goldfish', hint: 'Freshwater!' }, { word: 'Guppy', hint: 'Freshwater!' }, { word: 'Bettafish', hint: 'Freshwater!' }, { word: 'Cory Catfish', hint: 'Freshwater!' }, { word: 'Killifish', hint: 'Freshwater!' }, { word: 'Neon Tetra', hint: 'Freshwater!' }, { word: 'Cherry Barb', hint: 'Freshwater!' }, { word: 'Oscar', hint: 'Freshwater!' }, { word: 'Bristlenost Pleco', hint: 'Freshwater!' }, { word: 'Zebra Danio', hint: 'Freshwater!' }, { word: 'Platy', hint: 'Freshwater!' }, { word: 'Molly', hint: 'Freshwater!' }, { word: 'Discus', hint: 'Freshwater!' }, { word: 'Pearl Gourami', hint: 'Freshwater!' }, { word: 'Rainbowfish', hint: 'Freshwater!' }, { word: 'Green Swordtail', hint: 'Freshwater!' }, { word: 'Peacock Cichlid', hint: 'Freshwater!' }, { word: 'Jack Dempsy', hint: 'Freshwater!' }, { word: 'Electric Blue Acara', hint: 'Freshwater!' }, { word: 'German Blue Ram', hint: 'Freshwater!' }, { word: 'Cherry Barb', hint: 'Freshwater!' }, { word: 'Flowerhorn Chichlid', hint: 'Freshwater!' }, { word: 'Harlequin Rasboras', hint: 'Freshwater!' }, { word: 'Congo Tetra', hint: 'Freshwater!' }, { word: 'Paradise Fish', hint: 'Freshwater!' }, { word: 'Florida Flag Fish', hint: 'Freshwater!' }, { word: 'Tench', hint: 'Freshwater!' }, { word: 'Beluga', hint: 'Freshwater!' }, { word: 'Starlet', hint: 'Freshwater!' }, { word: 'White Sturgeon', hint: 'Freshwater!' }, { word: 'Mackeral', hint: 'Saltwater!' }, { word: 'Herring', hint: 'Saltwater/Freshwater!' }, { word: 'Buffalo Fish', hint: 'Freshwater!' }, { word: 'Marlin', hint: 'Saltwater!' }, { word: 'Hake', hint: 'Saltwater!' }, { word: 'Halibut', hint: 'Saltwater!' }
+    { word: 'Trout', hint: 'Freshwater!' }, { word: 'Clownfish', hint: 'Saltwater!' }, { word: 'Bass', hint: 'Freshwater and Saltwater!' 		 },{ word: 'Red Porgy', hint: 'Saltwater!' }, { word: 'Barracuda', hint: 'Saltwater!' }, { word: 'Crimson Sea Bream', hint: 'Saltwater!' }, { word: 'Common Dentex', hint: 'Saltwater!' }, { word: 'Macropinna', hint: 'Saltwater!' }, { word: 'Sargo', hint: 'Saltwater!' }, { word: 'Sand Steenbras', hint: 'Saltwater!' }, { word: 'Annular Sea Bream', hint: 'Saltwater!' }, { word: 'Common Pandora', hint: 'Saltwater!' }, { word: 'Scup', hint: 'Saltwater!' }, { word: 'Boops Boops', hint: 'Saltwater!' }, { word: 'Viperfish', hint: 'Saltwater!' }, { word: 'Spottail Pinfish', hint: 'Saltwater!' }, { word: 'Porgy', hint: 'Saltwater!' },{ word: 'Triggerfish', hint: 'Saltwater!' }, { word: 'Black Musselcracker', hint: 'Saltwater!' }, { word: 'Yellowfin Bream', hint: 'Saltwater!' }, { word: 'Cod', hint: 'Saltwater!' }, { word: 'Walleye', hint: 'Freshwater!' }, { word: 'Goldfish', hint: 'Freshwater!' }, { word: 'Guppy', hint: 'Freshwater!' }, { word: 'Bettafish', hint: 'Freshwater!' }, { word: 'Cory Catfish', hint: 'Freshwater!' }, { word: 'Killifish', hint: 'Freshwater!' }, { word: 'Neon Tetra', hint: 'Freshwater!' }, { word: 'Cherry Barb', hint: 'Freshwater!' }, { word: 'Oscar', hint: 'Freshwater!' }, { word: 'Bristlenost Pleco', hint: 'Freshwater!' }, { word: 'Zebra Danio', hint: 'Freshwater!' }, { word: 'Platy', hint: 'Freshwater!' }, { word: 'Molly', hint: 'Freshwater!' }, { word: 'Discus', hint: 'Freshwater!' }, { word: 'Pearl Gourami', hint: 'Freshwater!' }, { word: 'Rainbowfish', hint: 'Freshwater!' }, { word: 'Green Swordtail', hint: 'Freshwater!' }, { word: 'Peacock Cichlid', hint: 'Freshwater!' }, { word: 'Jack Dempsy', hint: 'Freshwater!' }, { word: 'Electric Blue Acara', hint: 'Freshwater!' }, { word: 'German Blue Ram', hint: 'Freshwater!' }, { word: 'Cherry Barb', hint: 'Freshwater!' }, { word: 'Flowerhorn Chichlid', hint: 'Freshwater!' }, { word: 'Harlequin Rasboras', hint: 'Freshwater!' }, { word: 'Congo Tetra', hint: 'Freshwater!' }, { word: 'Paradise Fish', hint: 'Freshwater!' }, { word: 'Florida Flag Fish', hint: 'Freshwater!' }, { word: 'Tench', hint: 'Freshwater!' }, { word: 'Beluga', hint: 'Freshwater!' }, { word: 'Starlet', hint: 'Freshwater!' }, { word: 'White Sturgeon', hint: 'Freshwater!' }, { word: 'Mackeral', hint: 'Saltwater!' }, { word: 'Herring', hint: 'Saltwater/Freshwater!' }, { word: 'Buffalo Fish', hint: 'Freshwater!' }, { word: 'Marlin', hint: 'Saltwater!' }, { word: 'Hake', hint: 'Saltwater!' }, { word: 'Halibut', hint: 'Saltwater!' }, 
 ];
 
 var currentWord = selectWord();
@@ -283,7 +313,7 @@ function checkAnswer() {
             for (var i = 0; i < poppedBubbles.length; i++) {
                 poppedBubbles[i].style.visibility = "hidden";
             }
-        }, 4000);
+        }, 3999);
         
     } else {
         result.innerHTML = 'Incorrect. The correct answer is ' + currentWord.word;
@@ -313,6 +343,5 @@ function scrambleWord(word) {
     }
     return scrambledWord;
 }
-
 
 </script>
