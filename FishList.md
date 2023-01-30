@@ -24,4 +24,5 @@
 { word: 'Mackeral', hint: 'Saltwater!' }, { word: 'Herring', hint: 'Saltwater/Freshwater!' }, { word: 'Buffalo Fish', hint: 'Freshwater!' }, 
 { word: 'Marlin', hint: 'Saltwater!' }, { word: 'Hake', hint: 'Saltwater!' }, { word: 'Halibut', hint: 'Saltwater!' }, { word: 'Anglerfish', hint: 'Saltwater!' }, 
 { word: 'Sole', hint: 'Saltwater!' }, { word: 'Lionfish', hint: 'Saltwater!' }, { word: 'Seahorse', hint: 'Saltwater!' }, { word: 'Mandarinfish', hint: 'Freshwater!' }
-
+{ word: 'Royal Blue Tang', hint: 'Saltwater!' }, { word: 'Moorish Idol', hint: 'Saltwater!' }, { word: 'Pufferfish', hint: 'Saltwater!' },
+{ word: 'Boxfish', hint: 'Saltwater!' }, { word: 'Longhorn Cowfish', hint: 'Saltwater!' }, { word: 'Burrfish', hint: 'Saltwater!' }
