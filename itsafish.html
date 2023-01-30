@@ -182,7 +182,7 @@ body {
 
 h3 {
   letter-spacing: 2px;
-  animation: expand-contracth3 21.2s ease-in-out infinite;
+  animation: expand-contracth3 19.2s ease-in-out infinite;
   text-shadow: #5e6491 3px 2px 6px;
 }
 
@@ -336,14 +336,14 @@ function checkAnswer() {
             bubbles[i].classList.add("pop");
         }
         
-        setTimeout(function() {
-            var poppedBubbles = document.getElementsByClassName("pop");
-            for (var i = 0; i < poppedBubbles.length; i++) {
-                poppedBubbles[i].style.display = "none";
-            }
-        }, 3999);
-        
-    } else {
+ //       setTimeout(function() {
+ //           var poppedBubbles = document.getElementsByClassName("pop");
+  //          for (var i = 0; i < poppedBubbles.length; i++) {
+     //           poppedBubbles[i].style.display = "none";
+   //         }
+   //     }, 3999);
+    }
+    else {
         result.innerHTML = 'Incorrect. The correct answer is ' + currentWord.word;
         scoreCount = 0;
         score.innerHTML = scoreCount;
