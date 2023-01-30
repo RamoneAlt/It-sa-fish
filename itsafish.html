@@ -136,7 +136,7 @@ h1 {
             transform: translateY(-100vh);
              width: 64px;
              height: 64px;
-             opacity: 0.65;
+             opacity: 0.75;
              box-shadow: lightblue 0px 0px;
         }
     }
@@ -222,7 +222,7 @@ var bubbles = [];
 // Create a function to generate random bubbles
 function generateBubbles() {
     // Set a random x and y position for each bubble
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 2; i++) {
         var x = Math.floor(Math.random() * window.innerWidth - 69);
         var y = Math.floor(Math.random() * window.innerHeight - 34);
 
@@ -247,7 +247,7 @@ function generateBubbles() {
     }
 }
 // Call the generateBubbles function every 2000ms (2s)
-setInterval(generateBubbles, 95);
+setInterval(generateBubbles, 85);
 
 var form = document.querySelector("form");
 form.addEventListener("submit", function(event) {
