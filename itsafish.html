@@ -13,7 +13,6 @@
   text-align: center;
 }
 #scrambled-word {
-  animation: expand-contracth3 6s ease-in-out infinite;
   font-size: 47px;
   margin-bottom: 3px;
   letter-spacing: 1px;
@@ -21,7 +20,7 @@
 #result {
   margin-top: 10px;
   font-size: 24px;
-  animation: expand-contracthbox 6s ease-in-out infinite;
+  animation: expand-contracthbox 12s ease-in-out infinite;
 }
 
   #guess-input {
@@ -67,7 +66,7 @@
     }
     
 h1 {
-  animation: expand-contract 12.2s ease-in-out infinite;
+  animation: expand-contract 32.2s ease-in-out infinite;
   text-shadow: #5e6491 3px 2px 6px;
   font-size: 50px;
   transform: skew(20deg, 0deg);
@@ -164,12 +163,13 @@ h1 {
   }
 
   100% {
-    width: 14px;
-    height: 14px;
+    width: 4px;
+    height: 4px;
     opacity: 0;
     transform: translateY(-100vh);
     transform: translate(-10px, -400px);
     transform: scale(0);
+    display: none;
   }
 }
 
@@ -182,7 +182,7 @@ body {
 
 h3 {
   letter-spacing: 2px;
-  animation: expand-contracth3 10.2s ease-in-out infinite;
+  animation: expand-contracth3 21.2s ease-in-out infinite;
   text-shadow: #5e6491 3px 2px 6px;
 }
 
@@ -339,9 +339,9 @@ function checkAnswer() {
         setTimeout(function() {
             var poppedBubbles = document.getElementsByClassName("pop");
             for (var i = 0; i < poppedBubbles.length; i++) {
-                poppedBubbles[i].style.visibility = "hidden";
+                poppedBubbles[i].style.display = "none";
             }
-        }, 4005);
+        }, 3999);
         
     } else {
         result.innerHTML = 'Incorrect. The correct answer is ' + currentWord.word;
